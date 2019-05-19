@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <!--v-for - директива выводит данные из массива как ng-for-->
+      <!--v-bind:key атрибут для однозначной идентификации объектов-->
+      <tweet 
+      v-for='tweet in tweets'
+      v-bind:key='tweet.id'
+      v-bind:tweet-text='tweet.tweetText'
+      v-bind:img='tweet.img'
+      v-bind:name='tweet.name'
+      v-bind:link='tweet.link'
+      v-bind:data='tweet.data'
+      ></tweet>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="moment.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
